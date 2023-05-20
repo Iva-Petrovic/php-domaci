@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2023 at 11:08 PM
+-- Generation Time: May 20, 2023 at 12:53 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,7 +39,8 @@ CREATE TABLE `korisnici` (
 --
 
 INSERT INTO `korisnici` (`korisnik_id`, `imePrezime`, `username`, `password`) VALUES
-(0, 'iva', 'iva', 'iva');
+(1, 'iva', 'iva', 'iva'),
+(2, 'milan', 'milan', 'milan');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,31 @@ INSERT INTO `prodaja` (`proizvod_id`, `naziv`, `godina_proizvodnje`, `vrsta`, `c
 (2, 'Domestos', '2022', 'Kucna hemija', 200, 1),
 (3, 'Jogurt', '2023', 'Osnovne namernice', 250, 1),
 (4, 'Pedigree Granule', '2022', 'Hrana za pse', 400, 1),
-(5, 'Orbit zvake', '2023', 'Grickalice', 50, 1);
+(5, 'Orbit zvake', '2023', 'Grickalice', 50, 1),
+(6, 'Cips', '2023', 'Grickalica', 300, 2),
+(7, 'Coca Cola', '2023', 'Sokovi', 100, 2),
+(8, 'Stark Najlepse Zelje', '2022', 'Cokolada', 200, 2),
+(9, 'Grand Kafa 200g', '2023', 'Kafa', 250, 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `korisnici`
+--
+ALTER TABLE `korisnici`
+  ADD PRIMARY KEY (`korisnik_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `korisnici`
+--
+ALTER TABLE `korisnici`
+  MODIFY `korisnik_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
